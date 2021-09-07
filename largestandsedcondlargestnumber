@@ -1,0 +1,27 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{ 
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+    cin>>arr[i];
+        }
+        int maxno1=INT_MIN;
+        int maxno2=INT_MIN;
+        for(int i=0;i<n;i++){
+            if(arr[i]>maxno1){
+                maxno2=maxno1;
+                maxno1=arr[i];
+            }
+            else if(arr[i]>maxno2){
+                maxno2=arr[i];
+            }
+            }
+            
+        cout<<"Largest number is "<< maxno1 <<" and second largest number is "<< maxno2 <<endl;
+        
+    return 0;
+}
